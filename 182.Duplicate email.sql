@@ -42,4 +42,4 @@
 
 -- # Write your MySQL query statement below
 select email FROM Person Group by email having count(email) > 1;
--- here groupby groups the emails having count of emails more than one simple 😊╰(*°▽°*)╯
+-- here groupby groups the emails having count of emails more than one simple 😊
