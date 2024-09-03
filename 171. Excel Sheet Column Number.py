@@ -39,4 +39,4 @@ class Solution:
             col_num = col_num * 26 + (ord(char) - 64)
         return col_num
 
-        
+            
