@@ -24,7 +24,7 @@
  
 
 
- class Solution:
+class Solution:
     def distributeCandies(self, candyType: List[int]) -> int:
         L = len(candyType)
         eat = L//2
