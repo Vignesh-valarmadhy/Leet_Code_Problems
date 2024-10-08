@@ -43,3 +43,4 @@ class Solution:
             else:
                 leftsum += nums[i]
         return -1
+
