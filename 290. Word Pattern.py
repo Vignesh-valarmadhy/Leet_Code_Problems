@@ -59,5 +59,7 @@ class Solution:
             charToWord[c] = w
             wordToChar [w] = c
         return True
+
+        
         
             
