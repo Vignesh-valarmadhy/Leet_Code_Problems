@@ -30,17 +30,26 @@
 
 class Solution:
     def validMountainArray(self, arr: List[int]) -> bool:
-        if len(arr) < 3 : return False
+        n = len(arr)
+        if n < 3:
+            return False
 
-        L_Count = 0 
-        R_Count = len(arr)-1
+        increaseStart = False
+        decreaseStart = False
 
-        while L_Count < len(arr)-1 and arr[L_Count] < arr[L_Count+1]:
-            L_Count += 1
-        while R_Count-1 > 0 and arr[R_Count] < arr[R_Count-1]:
-            R_Count -= 1
-        if L_Count == R_Count:
-            return True
-        else: return False
+        for i in range(n - 1):
+            if arr[i] == arr[i + 1]:  # numbers can not be equal
+                return False
+
+            if arr[i] < arr[i + 1]:
+                if decreaseStart:  # if we have started decreasing, it's invalid
+                    return False
+                increaseStart = True  # we have started increasing
+
+            elif arr[i] > arr[i + 1]:
+                decreaseStart = True  # we have started decreasing
+
+        # we need both increase and decrease to have a valid mountain
+        return increaseStart and decreaseStart
 
         
