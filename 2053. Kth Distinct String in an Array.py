@@ -50,5 +50,3 @@ class Solution:
             if k == 0:
                 return i
         return ""
-
-        
