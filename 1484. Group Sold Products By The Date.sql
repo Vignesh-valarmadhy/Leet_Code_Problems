@@ -50,7 +50,7 @@
 -- For 2020-06-01, Sold items were (Pencil, Bible), we sort them lexicographically and separate them by a comma.
 -- For 2020-06-02, the Sold item is (Mask), we just return it.
 
--- # Write your MySQL query statement below
+-- # Write your MySQL query statement below 
 SELECT sell_date , 
         COUNT(DISTINCT product) as num_sold,
         GROUP_CONCAT(
