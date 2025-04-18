@@ -25,6 +25,9 @@
 # s[i] and c are lowercase English letters.
 # It is guaranteed that c occurs at least once in s.
 
+from typing import List
+
+
 class Solution:
     def shortestToChar(self, s: str, c: str) -> List[int]:
         a = []
