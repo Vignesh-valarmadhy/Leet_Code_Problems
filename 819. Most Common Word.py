@@ -29,10 +29,16 @@
 # 0 <= banned.length <= 100
 # 1 <= banned[i].length <= 10
 # banned[i] consists of only lowercase English letters.
-
 import re
+from typing import Counter, List
 class Solution:
     def mostCommonWord(self, paragraph: str, banned: List[str]) -> str:
-        a = re.split(r'\W+' , paragraph.lower())
-        b = [w for w in a if w not in banned]
-        return max(b, key=b.count)
+        s=re.split(r"[^\w]+", paragraph.lower())
+        hash_map=Counter(s)
+        for i,j in hash_map.most_common():
+            if i in banned or i=="":
+                continue
+            else:
+                print(i)
+                return i
+        return ""
